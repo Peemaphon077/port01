@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Peeport</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="nav-left">
+                <a href="#" @click.prevent="scrollTo('top')">Home</a>
+                <a href="#about" @click.prevent="scrollTo('about')">About</a>
+                <a href="#skills" @click.prevent="scrollTo('skills')">Skills</a>
+                <a href="#projects" @click.prevent="scrollTo('projects')">Projects</a>
+                <a href="#certificates" @click.prevent="scrollTo('certificates')">Certificates</a>
+            </div>
+            <div class="nav-right">
+                <a href="https://www.linkedin.com/in/peemaphon-wiangin-a8183935b" target="_blank" rel="noopener"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Peemaphon077" target="_blank" rel="noopener"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/_pmp_19?igsh=MWR0dXZ6YzltNXRyMA==" target="_blank" rel="noopener"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/peemaphon/" target="_blank" rel="noopener"><i
+                        class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero-section" id="top">
+            <div class="hero-text">
+                <h1 v-html="name"></h1>
+                <p>{{ intro }}</p>
+            </div>
+            <div class="hero-image">
+                <img :src="photoUrl" alt="Profile Image">
+            </div>
+        </div>
+
+        <!-- About Me Section -->
+        <section id="about" class="card-section" style="background: #3D5975;">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>
+                    ข้าพเจ้ากำลังศึกษาชั้นปีที่ 4 สาขาวิทยาการคอมพิวเตอร์ มีความสนใจในด้าน Java Programming
+                    และต้องการต่อยอดความรู้ไปสู่การพัฒนาระบบในระดับมืออาชีพ
+                    ข้าพเจ้ามีประสบการณ์จาก<br>โปรเจกต์จริง ทั้งในด้าน การออกแบบ Web Application ด้วย Figma
+                    <br>และการพัฒนาเว็บไซต์โดยใช้ HTML, CSS, JavaScript และ Python ซึ่งช่วยให้เข้าใจภาพรวมของการพัฒนาเว็บได้
+                    นอกจากนี้ ข้าพเจ้ายังเป็นผู้ที่มีความกระตือรือร้นในการเรียนรู้สิ่งใหม่ ๆ
+                    สามารถทำงานร่วมกับผู้อื่นได้ดี และพร้อมรับฟังคำแนะนำเพื่อนำไปพัฒนาตนเองอย่างต่อเนื่อง
+                    ปัจจุบัน ข้าพเจ้ากำลังมองหาโอกาสในการฝึกงานในสภาพแวดล้อมการทำงานจริง เพื่อเรียนรู้เพิ่มเติม
+                    พัฒนาทักษะ และเตรียมความพร้อมสำหรับการทำงานในสายเทคโนโลยีในอนาคต
+
+                </p>
+                <p>
+                    Currently, I am seeking an internship opportunity in a real working environment to further enhance
+                    my skills,
+                    gain practical experience, and prepare myself for a future career in the technology field.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="card-section" style="background: #111;">
+            <div class="clients-section">
+                <h2>Skills</h2>
+                <div class="clients-logos">
+                    <div class="client-box">HTML</div>
+                    <div class="client-box">CSS</div>
+                    <div class="client-box">JavaScript</div>
+                    <div class="client-box">Java</div>
+                    <div class="client-box">MySQL</div>
+                    <div class="client-box">Vue.js</div>
+                    <div class="client-box">Vercel</div>
+                    <div class="client-box">Figma</div>
+                    <div class="client-box">GitHub</div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Projects Section -->
+    <section id="projects" class="card-section">
+        <h2>Projects</h2>
+        <div class="card-grid">
+            <div class="card">
+                <img src="/image/exercise.png" alt="Fitness Logo" class="project-logo">
+                <h3>Web Application for Tracking Workout Behavior with Machine Learning</h3>
+                <p>It is a website for those interested in exercising and tracking their exercise behavior.</p>
+                <div class="card-btn-row">
+                    <a class="btn-primary"
+                        href="https://www.figma.com/proto/9gaomw3JJJ3LTxDgPum32V/%E0%B9%81%E0%B8%AD%E0%B8%9B%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%AD%E0%B8%B1%E0%B8%A5%E0%B8%81%E0%B8%AD%E0%B8%A3%E0%B8%B4%E0%B8%97%E0%B8%B6%E0%B8%A1?node-id=404-323&t=s1YgfGkezDXr8wgw-1&scaling=contain&content-scaling=fixed&page-id=0%3A1"
+                        target="_blank" rel="noopener">
+                        Figma
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/image/travel-and-tourism-2.png" alt="Travel Logo" class="project-logo">
+                <h3>เที่ยวกันมั้ย</h3>
+                <p>It is a website for those interested in traveling within Phayao Province.</p>
+                <div class="card-btn-row">
+                    <a class="btn-primary"
+                        href="https://www.figma.com/proto/hpVBp9MJWFApKaXkjixXo0/Untitled?node-id=179-442&p=f&t=QVF529tlgPKLJaOS-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=179%3A442"
+                        target="_blank" rel="noopener">
+                        Figma
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="card-section" style="background: #111;">
+        <h2>Certificates</h2>
+        <div class="card-grid">
+            <div class="card">
+                <img src="/image/cer04.png" alt="Cert 1">
+                <h3>Prompt Engineering with GitHub Copilot</h3>
+                <p>เรียนรู้ฟีเจอร์สำคัญทั้ง Code Completion, Chat Interface, CLI, Pull Request Management รวมไปถึงการใช้
+                    Custom Instructions.</p>
+            </div>
+            <div class="card">
+                <img src="/image/cer03.png" alt="Cert 2">
+                <h3>ICT Open House</h3>
+                <p>ทำการนำเสนอโปรเจคแก่ท่านคณะกรรมการ และผู้ที่มาร่วมงาน.</p>
+            </div>
+            <div class="card">
+                <img src="/image/cer02.png" alt="Cert 3">
+                <h3>Microsoft Azure</h3>
+                <p>เรียนรู้เกี่ยวกับการใช้ Microsoft Azure ในการพัฒนาแอปพลิเคชัน.</p>
+            </div>
+            <div class="card">
+                <img src="/image/cer01.jpg" alt="Cert 4">
+                <h3>Python for Beginners</h3>
+                <p>เรียนรู้เรื่อง Python เบื่องต้น.</p>
+            </div>
+            <div class="card">
+                <img src="/image/cer05.png" alt="Cert 5">
+                <h3>Responsive Web Design</h3>
+                <p>เรียนรู้เรื่อง HTML, CSS และ JavaScript.</p>
+            </div>
+            <div class="card">
+                <img src="/image/cer06.png" alt="Cert 6">
+                <h3>Machine Learning with Python</h3>
+                <p>เรียนรู้เกี่ยวกับการใช้ Machine Learning ด้วย Python.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
